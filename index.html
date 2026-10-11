@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#2F7BFF" />
+  <meta name="description" content="校园集市 —— 面向大学生的校园生活信息平台原型 Demo" />
+  <title>校园集市 · 校园生活信息平台（原型 Demo）</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="stage">
+
+    <!-- 桌面端用“手机外壳”居中展示；手机浏览器打开时自动全屏 -->
+    <div class="phone">
+      <div class="phone__island" aria-hidden="true"></div>
+      <div class="app" id="app">
+        <!-- 普通页面顶部导航（首页/发布/我的为通栏页头，不使用此导航） -->
+        <header class="navbar" id="navbar" hidden></header>
+        <!-- 页面渲染容器，所有页面都挂载在这里 -->
+        <main class="page" id="page"></main>
+        <!-- 底部标签栏 -->
+        <nav class="tabbar" id="tabbar" hidden></nav>
+      </div>
+    </div>
+
+    <p class="stage__tip">
+      电脑上双击 <b>index.html</b> 即可运行 · 想看手机效果：F12 打开开发者工具后按 <b>Ctrl + Shift + M</b>
+    </p>
+  </div>
+
+  <!-- 无构建、无依赖，直接按顺序加载即可运行（避免 file:// 下 ES Module 的跨域限制） -->
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/category.js"></script>
+  <script src="js/pages/detail.js"></script>
+  <script src="js/pages/publish.js"></script>
+  <script src="js/pages/mine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
